@@ -1,0 +1,50 @@
+
+
+
+
+{
+  "name": "your-bot-name",
+  "description": "Your Telegram Bot Description",
+  "repository": "https://github.com/yourusername/your-bot-repo",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token",
+      "required": true
+    },
+    "STORAGE_FOLDER": {
+      "description": "The folder where files are stored",
+      "value": "file_storage",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Owner's Telegram User ID",
+      "required": true
+    },
+    "YOUR_CUSTOM_ENV_VAR": {
+      "description": "A custom environment variable",
+      "value": "your_value",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
